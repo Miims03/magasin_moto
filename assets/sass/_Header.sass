@@ -1,0 +1,63 @@
+@mixin Dflex 
+    display: flex
+    justify-content: center
+    align-items: center
+
+header
+    @include Dflex
+    gap: 5rem
+    // background: #fff
+    padding: 2% 20% 0 20%
+    nav
+        
+        ul
+            @include Dflex
+            // gap: 1rem
+            li
+                @include Dflex
+                justify-content: center
+                // background: grey
+                width: 20rem
+                a
+                    font-size: 30px
+                    text-shadow: 5px 3px 5px #000000
+            li:nth-child(1)
+                justify-content: center
+                width: 10rem
+    a
+        .logo
+            // animation: blur 5s infinite
+            
+            height: 8rem
+            width: 8rem
+            background-size: cover
+           
+        .flip
+            transform: scaleX(-1)
+
+.active
+    text-shadow: 5px 3px 8px #ae7e1a
+
+.logoBg1
+    
+    background: url('../img/setting-dynamic-clay.png')
+    filter: drop-shadow(1px 5px 10px #ae7e1a)
+// .logoBg2
+    
+//     background: url('../img/setting-dynamic-color.png')
+// .logoBg3
+    
+//     background: url('../img/setting-dynamic-gradient.png')
+.logoBg2
+    background: url('../img/setting-dynamic-premium.png')
+    filter: drop-shadow(1px 5px 10px black)
+
+@keyframes blur
+    0%
+        filter: blur(0.5rem)
+        opacity: 0
+    50%
+        filter: blur(0)
+        opacity: 1
+    100%
+        opacity: 0
