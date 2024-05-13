@@ -15,7 +15,7 @@ class MotoType extends AbstractType
             ->add('nom')
             ->add('marque')
             ->add('couleur')
-            ->add('année')
+            ->add('annee')
             ->add('prix')
         ;
     }

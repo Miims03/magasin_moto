@@ -1,0 +1,156 @@
+@mixin Dflex 
+    display: flex
+    justify-content: center
+    align-items: center
+
+#basemoto
+    @include Dflex
+    flex-direction: column
+    justify-content: start
+    gap: 4rem
+    // background: url(('../img/top-view-newspaper-pieces-arrangement.jpg'))
+    background-size: cover
+    height: 82.4vh
+    .journal
+        background: url(../img/white-paper-texture-background.jpg)
+        background-size: cover
+        margin-right: 0rem
+        width: 40rem
+        height: 96%
+        @include Dflex
+        flex-direction: column
+        justify-content: start
+        box-shadow: 10px 0px 20px #00000084
+        border-radius: 30px
+        gap: 3rem
+        h1
+            margin-top: 3rem
+            color: black
+            text-decoration: underline
+        .grosul
+            height: 85%
+            width: 90%
+            .libase
+                @include Dflex
+                flex-direction: column
+                justify-content: start
+                gap: 2rem
+                h1
+                    margin-top: 3rem
+                    font-size: 50px
+                    color: #000000
+                    text-decoration: underline
+                    text-shadow: 0px 0px 0px #000000
+                h3
+                    font-size: 25px
+                    color: #000000
+                    margin-bottom: 3rem
+                    text-decoration: underline
+                    text-shadow: 0px 0px 0px #000000
+                img
+                    width: 90%
+                    border-radius: 30px
+                    box-shadow: 10px 0px 20px #00000084
+            .limoto
+                margin-top: 1.5rem
+                height: 100%
+                width: 100%
+                @include Dflex
+                flex-direction: column
+                justify-content: start
+                gap: 1rem
+                h1
+                    font-family: 'Poppins',sans-serif
+                    text-shadow: 0px 0px 0px #000000
+                    color: black
+                    font-size: 35px
+                a
+                    height: 50%
+                    width: 90%
+                    @include Dflex
+                    overflow: hidden
+                    cursor: pointer
+                    img
+                        height: 100%
+                        width: 90%
+                        transform: scale(1.35)
+                        transition: 0.5s
+                    img:hover
+                        transform: scale(1.37)
+                ul
+                    width: 80%
+                    li
+                        font-family: 'Poppins',sans-serif
+                        text-shadow: 0px 0px 0px #000000
+                        color: black
+                        font-size: 25px
+                        font-weight: 600
+            .cata
+                display: none
+            .cata.active
+                display: flex
+    .botth
+        @include Dflex
+        justify-content: space-between
+        width: 38rem
+        position: absolute
+        right: 39.2rem
+        bottom: 6rem
+        .btnNext
+            height: 4rem
+            width: 4rem
+            border-radius: 50%
+            border: 2px solid black
+            cursor: pointer
+            font-size: 40px
+            color: black
+            @include Dflex
+            font-family: 'Poppins' , sans-serif
+            font-weight: 700
+        .btnNext:hover
+            animation: btn 2s infinite
+        .btnPaNext
+            @extend .btnNext
+        .createMoto
+            width: 20rem   
+            height: 4rem 
+            @include Dflex
+            font-size: 26px
+            color: black
+            border: 2px black solid
+            border-radius: 15px
+            transition: 0.5s
+            box-shadow: 5px 5px 0px #000000
+        .createMoto:hover
+            font-size: 27px
+            box-shadow: 2px 2px 0px #000000
+
+            
+@keyframes btn 
+    0%
+        font-size: 50px
+    50%
+        font-size: 40px
+    100%
+        font-size: 50px
+
+        
+form[name="moto"]
+    height: 35rem
+    width: 30rem
+    #moto
+        height: 100%
+        width: 100%
+        @include Dflex
+        flex-direction: column
+        justify-content: start
+        gap: 2rem
+        div
+            @include Dflex
+            flex-direction: column
+            gap: 1rem
+            label
+                color: black
+                font-size: 25px
+            input
+    

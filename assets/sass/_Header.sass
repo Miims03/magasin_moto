@@ -2,46 +2,43 @@
     display: flex
     justify-content: center
     align-items: center
-
-header
+.active
+    text-shadow: 5px 3px 8px #ae7e1a
+.headcc
     @include Dflex
     gap: 5rem
-    // background: #fff
-    padding: 2% 20% 0 20%
+    background: #211d2c
+    padding: 0 20% 0 20%
+    height: 15vh
     nav
-        
         ul
             @include Dflex
-            // gap: 1rem
             li
                 @include Dflex
                 justify-content: center
-                // background: grey
                 width: 20rem
                 a
                     font-size: 30px
-                    text-shadow: 5px 3px 5px #000000
+                    // text-shadow: 5px 3px 5px #000000
             li:nth-child(1)
                 justify-content: center
                 width: 10rem
     a
         .logo
             // animation: blur 5s infinite
-            
             height: 8rem
             width: 8rem
             background-size: cover
-           
+            filter: drop-shadow(1px 5px 10px #ae7e1a)
         .flip
             transform: scaleX(-1)
 
-.active
-    text-shadow: 5px 3px 8px #ae7e1a
+
 
 .logoBg1
     
     background: url('../img/setting-dynamic-clay.png')
-    filter: drop-shadow(1px 5px 10px #ae7e1a)
+    
 // .logoBg2
     
 //     background: url('../img/setting-dynamic-color.png')
@@ -50,7 +47,7 @@ header
 //     background: url('../img/setting-dynamic-gradient.png')
 .logoBg2
     background: url('../img/setting-dynamic-premium.png')
-    filter: drop-shadow(1px 5px 10px black)
+    // filter: drop-shadow(1px 5px 10px black)
 
 @keyframes blur
     0%
@@ -61,3 +58,26 @@ header
         opacity: 1
     100%
         opacity: 0
+        
+.headmoto
+    @include Dflex
+    gap: 5rem
+    // background: #f2f0f6
+    height: 15vh
+    padding: 0 20% 0 20%
+    nav
+        ul
+            @include Dflex
+            // gap: 1rem
+            li
+                @include Dflex
+                justify-content: center
+                // background: grey
+                width: 20rem
+                a
+                    font-size: 30px
+                    color: black
+                    // text-shadow: 5px 3px 5px #000000
+            li:nth-child(1)
+                justify-content: center
+                width: 10rem

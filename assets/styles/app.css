@@ -1,52 +1,52 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedgwick+Ave&display=swap");
-header {
+.active {
+  text-shadow: 5px 3px 8px #ae7e1a;
+}
+
+.headcc {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 5rem;
-  padding: 2% 20% 0 20%;
+  background: #211d2c;
+  padding: 0 20% 0 20%;
+  height: 15vh;
 }
-header nav ul {
+.headcc nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-header nav ul li {
+.headcc nav ul li {
   display: flex;
   justify-content: center;
   align-items: center;
   justify-content: center;
   width: 20rem;
 }
-header nav ul li a {
+.headcc nav ul li a {
   font-size: 30px;
-  text-shadow: 5px 3px 5px #000000;
 }
-header nav ul li:nth-child(1) {
+.headcc nav ul li:nth-child(1) {
   justify-content: center;
   width: 10rem;
 }
-header a .logo {
+.headcc a .logo {
   height: 8rem;
   width: 8rem;
   background-size: cover;
+  filter: drop-shadow(1px 5px 10px #ae7e1a);
 }
-header a .flip {
+.headcc a .flip {
   transform: scaleX(-1);
-}
-
-.active {
-  text-shadow: 5px 3px 8px #ae7e1a;
 }
 
 .logoBg1 {
   background: url("../img/setting-dynamic-clay.png");
-  filter: drop-shadow(1px 5px 10px #ae7e1a);
 }
 
 .logoBg2 {
   background: url("../img/setting-dynamic-premium.png");
-  filter: drop-shadow(1px 5px 10px black);
 }
 
 @keyframes blur {
@@ -62,13 +62,43 @@ header a .flip {
     opacity: 0;
   }
 }
+.headmoto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  height: 15vh;
+  padding: 0 20% 0 20%;
+}
+.headmoto nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.headmoto nav ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 20rem;
+}
+.headmoto nav ul li a {
+  font-size: 30px;
+  color: black;
+}
+.headmoto nav ul li:nth-child(1) {
+  justify-content: center;
+  width: 10rem;
+}
+
 #base {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   justify-content: start;
-  gap: 3rem;
+  gap: 4rem;
+  background: #211d2c;
 }
 #base h1 {
   font-size: 50px;
@@ -81,6 +111,8 @@ header a .flip {
   width: 80%;
   height: 70vh;
   border: 2px solid white;
+  margin-bottom: 2rem;
+  border-radius: 15px;
 }
 #base .ridesec div {
   display: flex;
@@ -92,7 +124,8 @@ header a .flip {
   width: 35%;
 }
 #base .ridesec div h3 {
-  margin-top: 3rem;
+  margin: 3rem 2rem 0 2rem;
+  text-align: center;
   font-size: 35px;
 }
 #base .ridesec div p {
@@ -116,14 +149,272 @@ header a .flip {
   list-style: square;
   font-size: 20px;
 }
-#base .ridesec img {
+#base .ridesec .imgmt10home {
   border-left: 2px solid white;
-  background: red;
   height: 100%;
   width: 65%;
+  background: url("../img/mt10.jpeg");
   background-size: cover;
+  border-radius: 15px;
+}
+#base .cbien {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 40vh;
+  gap: 5rem;
+}
+#base .cbien .bien {
+  cursor: pointer;
+  height: 20rem;
+  width: 23rem;
+  border: 2px solid white;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+#base .cbien .bien h2 {
+  font-size: 30px;
+}
+#base .cbien .bien img {
+  height: 10rem;
+  width: 10rem;
+}
+#base .cbien .bien:nth-child(1):hover img {
+  animation: motoRoule 2s infinite;
+}
+#base .cbien .bien:nth-child(2):hover img {
+  animation: casqueScale 2s infinite;
+}
+#base .cbien .bien:nth-child(3):hover img {
+  animation: shake 2s infinite;
 }
 
+@keyframes shake {
+  0% {
+    transform: rotate(50deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes casqueScale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes motoRoule {
+  0% {
+    transform: translateX(-170%);
+  }
+  100% {
+    transform: translateX(170%);
+  }
+}
+#basemoto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: start;
+  gap: 4rem;
+  background-size: cover;
+  height: 82.4vh;
+}
+#basemoto .journal {
+  background: url(../img/white-paper-texture-background.jpg);
+  background-size: cover;
+  margin-right: 0rem;
+  width: 40rem;
+  height: 96%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: start;
+  box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.5176470588);
+  border-radius: 30px;
+  gap: 3rem;
+}
+#basemoto .journal h1 {
+  margin-top: 3rem;
+  color: black;
+  text-decoration: underline;
+}
+#basemoto .journal .grosul {
+  height: 85%;
+  width: 90%;
+}
+#basemoto .journal .grosul .libase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: start;
+  gap: 2rem;
+}
+#basemoto .journal .grosul .libase h1 {
+  margin-top: 3rem;
+  font-size: 50px;
+  color: #000000;
+  text-decoration: underline;
+  text-shadow: 0px 0px 0px #000000;
+}
+#basemoto .journal .grosul .libase h3 {
+  font-size: 25px;
+  color: #000000;
+  margin-bottom: 3rem;
+  text-decoration: underline;
+  text-shadow: 0px 0px 0px #000000;
+}
+#basemoto .journal .grosul .libase img {
+  width: 90%;
+  border-radius: 30px;
+  box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.5176470588);
+}
+#basemoto .journal .grosul .limoto {
+  margin-top: 1.5rem;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: start;
+  gap: 1rem;
+}
+#basemoto .journal .grosul .limoto h1 {
+  font-family: "Poppins", sans-serif;
+  text-shadow: 0px 0px 0px #000000;
+  color: black;
+  font-size: 35px;
+}
+#basemoto .journal .grosul .limoto a {
+  height: 50%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+#basemoto .journal .grosul .limoto a img {
+  height: 100%;
+  width: 90%;
+  transform: scale(1.35);
+  transition: 0.5s;
+}
+#basemoto .journal .grosul .limoto a img:hover {
+  transform: scale(1.37);
+}
+#basemoto .journal .grosul .limoto ul {
+  width: 80%;
+}
+#basemoto .journal .grosul .limoto ul li {
+  font-family: "Poppins", sans-serif;
+  text-shadow: 0px 0px 0px #000000;
+  color: black;
+  font-size: 25px;
+  font-weight: 600;
+}
+#basemoto .journal .grosul .cata {
+  display: none;
+}
+#basemoto .journal .grosul .cata.active {
+  display: flex;
+}
+#basemoto .botth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  width: 38rem;
+  position: absolute;
+  right: 39.2rem;
+  bottom: 6rem;
+}
+#basemoto .botth .btnNext, #basemoto .botth .btnPaNext {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  border: 2px solid black;
+  cursor: pointer;
+  font-size: 40px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+#basemoto .botth .btnNext:hover, #basemoto .botth .btnPaNext:hover {
+  animation: btn 2s infinite;
+}
+#basemoto .botth .createMoto {
+  width: 20rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  color: black;
+  border: 2px black solid;
+  border-radius: 15px;
+  transition: 0.5s;
+  box-shadow: 5px 5px 0px #000000;
+}
+#basemoto .botth .createMoto:hover {
+  font-size: 27px;
+  box-shadow: 2px 2px 0px #000000;
+}
+
+@keyframes btn {
+  0% {
+    font-size: 50px;
+  }
+  50% {
+    font-size: 40px;
+  }
+  100% {
+    font-size: 50px;
+  }
+}
+form[name=moto] {
+  height: 35rem;
+  width: 30rem;
+}
+form[name=moto] #moto {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: start;
+  gap: 2rem;
+}
+form[name=moto] #moto div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+form[name=moto] #moto div label {
+  color: black;
+  font-size: 25px;
+}
 * {
   margin: 0;
   padding: 0;
@@ -132,8 +423,12 @@ header a .flip {
   color: #f6f6f6;
   box-sizing: border-box;
   font-family: "Sedgwick Ave", cursive;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
-body {
-  background: #211d2c;
+#bodymoto {
+  background: url("../img/top-view-newspaper-pieces-arrangement.jpg");
+  background-size: cover;
 }/*# sourceMappingURL=app.css.map */

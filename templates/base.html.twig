@@ -12,15 +12,15 @@
             {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
     </head>
-    <body>
+    <body id="{{ app.current_route == 'home' ? '' : 'bodymoto'}}">
     {% include 'components/header.html.twig' %}
-        <div id="base">
+        <div id="{{ app.current_route == 'home' ? 'base' : 'basemoto'}}">
             {% block body %}
                 <h1>La Magasin Du Motor</h1>
                 <div class='ridesec'>
                     <div>
-                        <h3>Ridez en toute sécurité.</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit velit placeat ipsam consectetur. Rerum tenetur fugiat commodi quis, repellendus illum, aliquid maxime adipisci distinctio repellat nam deleniti? Commodi enim officia doloribus ea mollitia sed aspernatur, quo a delectus pariatur quisquam aliquam voluptas consequuntur sint animi cupiditate perferendis? Provident eius explicabo quae repudiandae sed aspernatur quos ea rem? Beatae, possimus sunt.</p>
+                        <h3>Ridez en toute sécurité avec la Mt10.</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit velit placeat ipsam consectetur. Rerum tenetur fugiat commodi quis, repellendus illum, aliquid maxime adipisci distinctio repellat nam deleniti? Commodi enim officia doloribus ea mollitia sed aspernatur, quo a delectus pariatur quisquam aliquam voluptas consequuntur sint animi cupiditate perferendis?</p>
                         <ul>
                             <li>Waw La Moutour : Apagnan</li>
                             <li>Le Vitesse : Très Vite</li>
@@ -28,11 +28,47 @@
                             <li>Le Vitesse : Très Vite</li>
                         </ul>
                     </div>
-                    <img 
-                    src={{asset('img/mt10.jpeg')}}
-                    >
+                    <div class='imgmt10home'>
+                    </div>
+                </div>
+                <h1>Le Vite Cé B1 !</h1>
+                <div class="cbien">
+                    <div class="bien">
+                        <h2>
+                            La Moutour
+                        </h2>
+                        <img 
+                        src={{asset('img/moto.png')}}
+                        >
+                        <h2>
+                            Cé B1 !!
+                        </h2>
+                    </div>
+                    <div class="bien">
+                        <h2>
+                            La Kask
+                        </h2>
+                        <img 
+                        src={{asset('img/casque.png')}}
+                        >
+                        <h2>
+                            Cé B1 !!
+                        </h2>
+                    </div>
+                    <div class="bien">
+                        <h2>
+                            La Ygrek
+                        </h2>
+                        <img 
+                        src={{asset('img/moto1.png')}}
+                        >
+                        <h2>
+                            Cé B1 !!
+                        </h2>
+                    </div>
                 </div>
             {% endblock %}
         </div>
+        
     </body>
 </html>

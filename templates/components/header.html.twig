@@ -1,18 +1,24 @@
-<header>
-    <a href="#">
+<header class="{{ app.current_route == 'home' ? 'headcc' : 'headmoto'}}">
+    <a href={{ path('home')}}>
         <div class="logo logoBg1"></div>
     </a>
     <nav>
         <ul>
             <li>
-                <a href="#">Le Maison</a>
+                <a 
+                href={{ path('home')}}
+                class="{{ app.current_route == 'home' ? 'active' : ''}}"
+                >Le Maison</a>
             </li>
             <li>
-                <a href="#" class='active'>La Magasine Moutours</a>
+                <a 
+                href={{ path('moto')}}
+                class="{{ app.current_route starts with 'moto' ? 'active' : ''}}"
+                >La Catalogue Moutours</a>
             </li>
         </ul>
     </nav>
-    <a href="#">
+    <a href={{ path('home')}}>
         <div class="logo logoBg1 flip"></div>
     </a>
 </header>
